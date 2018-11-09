@@ -16,7 +16,10 @@
     <servlet>
         <servlet-name>spring</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-        <!--这个是可以不用配置的，默认在/WEB-INF/自己找XXX--servlet.xml对应的配置文件xxx对应为servlet的名字，我们也可以如上自己指定-->
+        <!--
+        这个是可以不用配置的，默认在/WEB-INF/自己找XXX、\-servlet.xml对应的配置文件xxx对应为servlet的名字，
+        我们也可以如上自己指定
+        -->
         <init-param>
             <param-name>contextConfigLocation</param-name>
             <param-value>/WEB-INF/spring-servlet.xml</param-value>
