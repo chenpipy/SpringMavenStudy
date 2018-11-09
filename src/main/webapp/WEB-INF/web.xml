@@ -1,17 +1,27 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<!--这个是自动生成的，无法使用-->
+<!--<!DOCTYPE web-app PUBLIC-->
+ <!--"-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"-->
+ <!--"http://java.sun.com/dtd/web-app_2_3.dtd" >-->
 
-<web-app>
+<!--修改后的-->
+<web-app id="WebApp_ID" version="2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+    http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
   <display-name>Archetype Created Web Application</display-name>
 
+    <!--都是新增的-->
     <servlet>
         <servlet-name>spring</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <!--这个是可以不用配置的，默认在/WEB-INF/自己找XXX--servlet.xml对应的配置文件xxx对应为servlet的名字，我们也可以如上自己指定-->
         <init-param>
             <param-name>contextConfigLocation</param-name>
             <param-value>/WEB-INF/spring-servlet.xml</param-value>
         </init-param>
+
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
