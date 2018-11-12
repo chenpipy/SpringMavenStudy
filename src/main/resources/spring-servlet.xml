@@ -28,7 +28,7 @@
         <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"/>
         这个地方，有的人是不知道的。我看有的人的例子，这个地方就写重复啦。
     -->
-
+    <mvc:default-servlet-handler />
     <!-- 视图解析 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/views/"/>
