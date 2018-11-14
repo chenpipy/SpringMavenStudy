@@ -2,6 +2,7 @@ package com.tmall.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.tmall.service.impl.StudentService;
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -27,19 +28,21 @@ public class StudentController {
     private StudentService studentService;
     protected final Logger logger = LoggerFactory.getLogger(this.getClass());
 
+    @ApiOperation(value = "获取所有学生对象", notes = "获取所有学生对象")
     @RequestMapping(value = "/getAllStudent", method = RequestMethod.GET)
     @ResponseBody
     public String getAllStudent() {
         Map<String, Object> map = new HashMap();
         try {
-            map.put("code",1);
-            map.put("data", 1/0);
+            map.put("code", 1);
+            map.put("data",studentService.getAllStudent() );
         } catch (Exception e) {
-            map.put("code",0);
-            map.put("message",e.getMessage());
+            map.put("code", 0);
+            map.put("message", e.getMessage());
             System.out.println();
             logger.error(e.getMessage());
         }
+        System.out.println("controller");
         return JSON.toJSONString(map);
     }
 }

@@ -21,6 +21,7 @@ public class StudentService implements IStudentService {
      * @return List<Student>
      */
     public List<Student> getAllStudent() {
+        System.out.println("service");
         return studentDao.findAll();
     }
 }
